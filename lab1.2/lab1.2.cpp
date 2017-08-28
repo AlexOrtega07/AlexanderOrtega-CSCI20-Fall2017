@@ -1,5 +1,6 @@
 //created by Alex Ortega
 //8-28-17 
+//American Flag
 
 #include <iostream>
 using namespace std;
