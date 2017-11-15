@@ -15,8 +15,7 @@ int main(){
         cin >> user_First;
         // determines if first name is too long
     if(strlen(user_First)>11){
-        cout<< "Too long. Run agian."<< endl;
-        return 0;
+        cout<< "Warning: First Name too long!"<< endl;
     }
     // This will accept the user's last name
     char user_Last[21];
@@ -24,15 +23,13 @@ int main(){
         cin >> user_Last;
         // determines if last name is too long
     if(strlen(user_Last)>21){
-        cout<< "Last Name too long. Run again."<< endl;
-        return 0;
+        cout<< "Warning: Last Name too long!"<< endl;
     }
     cout<<"Here's what you entered:"<< endl;
     cout <<user_First << " "<< user_Last<< endl;
     // Determines if names are the same
     if ((strcmp(user_First,user_Last)==0)){
-        cout<< "Names are the same. Run again."<< endl;
-        return 0;
+        cout<< "Warning: Names are the same!"<< endl;
         cout << user_First<< " "<<user_Last<< endl;
     }
     //this will create the user names
@@ -42,7 +39,8 @@ int main(){
     cout<< user_Last<<user_First;
     
 }
-/*Enter your first name.
+/*
+Enter your first name.
 Alex
 Enter your last name.
 Ortega
@@ -53,8 +51,8 @@ AlOrtega
 AOAlex
 OrtegaAlex
 */
-
-/*Enter your first name.
+/*
+Enter your first name.
 April
 Enter your last name.
 Browne
@@ -65,15 +63,30 @@ ApBrowne
 ABApril
 BrowneApril
 */
-/*Enter your first name.
+/*
+Enter your first name.
 AnaElizabeth
-Too long. Run agian
+Warning: First Name too long!
+Enter your last name.
+Hazeltine-Smith
+Here's what you entered:
+AnaElizabeth Hazeltine-Smith
+Here are a few usernames to choose from:
+AnHazeltine-Smith
+AHAnaElizabeth
+Hazeltine-SmithAnaElizabeth
 */
-/*Enter your first name.
+/*
+Enter your first name.
 James
 Enter your last name.
 James
 Here's what you entered:
 James James
-Names are the same. Run again.
+Warning: Names are the same!
+James James
+Here are a few usernames to choose from:
+JaJames
+JJJames
+JamesJames
 */
