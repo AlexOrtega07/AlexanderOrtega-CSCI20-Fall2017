@@ -1,7 +1,6 @@
-/* This program will be responsible for creating user names. It will accept a first name of up to 10
-characters and a last name of up to 20 characters. It will tell the user if the name is larger
-than the max size. It should also determine if the names are the same and output a warning.
-After checking, it will output 3 different user names.
+/* This program was created on 11/13/17 by Alex Ortega.
+This program takes a user inputed first and last name and will output a few suggestions 
+for what usernames you could possibly choose from.
 */
 
 #include <iostream>
@@ -15,25 +14,25 @@ int main(){
         cout<< "Enter your first name."<< endl;
         cin >> user_First;
         // determines if first name is too long
-    while(strlen(user_First)>11){
-        cout<< "Too long. Re-Enter First name."<< endl;
-        cin>> user_First;
+    if(strlen(user_First)>11){
+        cout<< "Too long. Run agian."<< endl;
+        return 0;
     }
     // This will accept the user's last name
     char user_Last[21];
         cout<< "Enter your last name."<< endl;
         cin >> user_Last;
         // determines if last name is too long
-    while(strlen(user_Last)>21){
-        cout<< "Last Name too long. Re-enter last name."<< endl;
-        cin>> user_Last;
+    if(strlen(user_Last)>21){
+        cout<< "Last Name too long. Run again."<< endl;
+        return 0;
     }
     cout<<"Here's what you entered:"<< endl;
     cout <<user_First << " "<< user_Last<< endl;
     // Determines if names are the same
-    while ((strcmp(user_First,user_Last)==0)){
-        cout<< "Names are the same. Re-enter Last."<< endl;
-        cin >> user_Last;
+    if ((strcmp(user_First,user_Last)==0)){
+        cout<< "Names are the same. Run again."<< endl;
+        return 0;
         cout << user_First<< " "<<user_Last<< endl;
     }
     //this will create the user names
@@ -53,4 +52,28 @@ Here are a few usernames to choose from:
 AlOrtega
 AOAlex
 OrtegaAlex
+*/
+
+/*Enter your first name.
+April
+Enter your last name.
+Browne
+Here's what you entered:
+April Browne
+Here are a few usernames to choose from:
+ApBrowne
+ABApril
+BrowneApril
+*/
+/*Enter your first name.
+AnaElizabeth
+Too long. Run agian
+*/
+/*Enter your first name.
+James
+Enter your last name.
+James
+Here's what you entered:
+James James
+Names are the same. Run again.
 */
