@@ -12,6 +12,7 @@ well. */
  using namespace std;
  
  int main() {
+    outFS.open("lab4.6.html") 
     string fname;
     string lname;
     int numcourses = 0;
@@ -24,8 +25,8 @@ well. */
     
     ifstream fin; 
     ofstream fout; 
-    fin.open("input.txt"); 
-    fout.open("output.txt"); 
+    fin.open("input.txt"); // opens input text
+    fout.open("output.txt"); // opens output text
          while(!fin.eof()) {
             fin >> fname;
             fin >> lname;
@@ -35,8 +36,7 @@ well. */
                 fin >> hours[i];
                 fin >> grade[i];
         }
-        
-        for(i = 0; i < numcourses; i++){
+        for(i = 0; i < numcourses; i++){// loop for leter grade to point value
             if(grade[i] == 'A'){
                 points[i] = 4.0;
             }
@@ -53,11 +53,10 @@ well. */
                 points[i] = 0.0;
             }
         }
-    int sumhours = 0;
+    int sumhours = 0;// declaring variables for output
     double sumpoints = 0.0;
     double gpa = 0.0;
-    
-        for(i = 0; i < numcourses; i++){
+        for(i = 0; i < numcourses; i++){// loop for gpa
             sumhours=sumhours+hours[i];
             sumpoints=sumpoints+(hours[i]*points[i]);
         }
